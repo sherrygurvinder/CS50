@@ -1,10 +1,9 @@
 #include<stdio.h>
-#include<stdlib.h>
 #include<string.h>
 int main(int arg,char* arg1[])
-{	char* key1,p1[100],p2[100];
+{	char* key1;
+	char p1[100],p2[100];
 	int i=0,key[100],n,key11,key22,temp,count,j=0,asc;
-	//key=atoi(arg1[1]);
 	key1=arg1[1];
 	if(arg!=2)
 	{
@@ -29,12 +28,12 @@ int main(int arg,char* arg1[])
 	}
 	n=i;
 	i=0;
-	printf("plaintext:");
-	fgets(p1,50,stdin);
+	printf("plaintext: ");
+	gets(p1);
 	count=strlen(p1);
  	count=count-1;
 	j=0;
-	printf("ciphertext:");
+	printf("ciphertext: ");
 	while(count>0)
 	{	
 		if(j==n)
@@ -43,35 +42,28 @@ int main(int arg,char* arg1[])
 		}
 		if(p1[i]>=65&&p1[i]<=90)
 		{
-			asc=p1[i];
-			//printf("\n ascii value p1[%d]  chracter %c",asc,p1[i]);
-			temp=90-asc;
-			//printf(" \n allowed character %d",temp);
+			temp=90-p1[i];
 			if(key[j]>temp)
 			{
-				p2[i]=asc+temp;
-				//printf("\n p2 %d key %d",p2[i],key[j]);
+				p2[i]=+temp;
 				key11=key[j]-temp;
-				//printf("\n remaining key %d",key11); 
 				p2[i]=65+key11-1;
 				printf(" %c",p2[i]);
 				key11=0;
 			}
 			else
 			{	
-				//printf(" \n ASC+key %d + %d = ",asc,key[j]);
-				p2[i]=asc+key[j];
+				p2[i]=p1[i]+key[j];
 				printf("%c",p2[i]);
 			}
 		j++;
 		}
 		else if(p1[i]>=97&&p1[i]<=122)
 		{	
-			asc=p1[i];
-			temp=122-asc;
+			temp=122-p1[i];
 			if(key[j]>temp)
 			{
-				p2[i]=asc+temp;
+				p2[i]=p1[i]+temp;
 				key11=key[j]-temp;
 				p2[i]=97+key11-1;
 				key11=0;	
@@ -79,7 +71,7 @@ int main(int arg,char* arg1[])
 			}	
 			else
 			{
-				p2[i]=asc+key[j];
+				p2[i]=p1[i]+key[j];
 				printf("%c",p2[i]);
 			}
 		
@@ -95,16 +87,6 @@ int main(int arg,char* arg1[])
 	i++;
 	count--;
 	}
-	//printf("\n %c ",p2[1]);
-	//p2[i]='\0';
-	//i=0;
-	//printf("ciphertext:");
-	/*while(p2[i]!='\0')
-	{
-		printf("%c",p2[i]);
-		i++;
-	}
-*/
 	printf("\n");
 
 	
