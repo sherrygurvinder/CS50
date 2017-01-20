@@ -23,7 +23,7 @@ int main(int arg,char* arg1[])
 		}
 		else
 		{	printf("Usage: ./vigenere k \n ");
-			//return 1;
+			return 1;
 		}
 		i++;
 	}
