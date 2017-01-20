@@ -12,7 +12,7 @@ int main(int arg,char* arg1[])
 	int key,key1,temp,asc,i=0,count;
 	key=atoi(arg1[1]);
 	key=key%26;
-	printf("\nplaintext:");
+	printf(" Plaintext: ");
 	fgets(p1,50,stdin);
 	count=strlen(p1);
  	count=count-1;
@@ -72,13 +72,13 @@ int main(int arg,char* arg1[])
 		{
 			p2[i]=p1[i];
 		}
-			i++;
-			count--;
+		i++;
+		count--;
 		
 	}
 	p2[i]='\0';
 	i=0;
-	printf("ciphertext:");
+	printf("ciphertext: ");
 	while(p2[i]!='\0')
 	{
 		printf("%c",p2[i]);
