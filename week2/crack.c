@@ -23,11 +23,14 @@ int main(int arg,char *argv[])
         return 1;
     }
     while(Index1<=122)
-    {   Index2=65;
+    {   
+        Index2=65;
         while(Index2<=122)
-            {   Index3=65;
+            {   
+                Index3=65;
                 while(Index3<=122)
-                    {   Index4=65;
+                    {   
+                        Index4=65;
                         while(Index4<=122)
                             {   
                                	sprintf(Password,"%c%c%c%c",Index1,Index2,Index3,Index4);
