@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block title %}
+    Log In
+{% endblock %}
+<style>
+th
+{
+
+text-align: CENTER;
+BORDER: 1PX SOLID;
+}
+td {
+    text-align: CENTER;
+    BORDER: 1PX SOLID;
+    }
+    table
+    {
+    align:center;
+    }
+</style>
+{% block main %}
+ <table class="table table-hover">
+        <tr>
+            <th>STOCK NAME</th>
+            <th>NO OF STOCKS</th>
+            <th>PRICE PER STOCK</th>
+            <th>TOTAL VALUE</th>
+        </tr>
+        {% for row in rows  %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3]*row[2]}}</td>
+        </tr>
+        {% endfor %}
+     <span>GRAND TOTAL $  10,000 </span></br>
+     <span>AVAILABLE  $ {{cash}}</span>
+        </table>
+
+
+{% endblock %}

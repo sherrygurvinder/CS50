@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+<style>
+th
+{
+
+text-align: CENTER;
+BORDER: 1PX SOLID;
+}
+td {
+    text-align: CENTER;
+    BORDER: 1PX SOLID;
+    }
+    table
+    {
+    align:center;
+    }
+</style>
+{% block main %}
+ <table class="table table-hover">
+        <tr>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>SYMBOL</th>
+        </tr>
+        <tr>
+            <td>{{ symbol_data.name }}</td>
+            <td>{{ symbol_data.price }}s</td>
+            <td>{{ symbol_data.symbol }}</td>
+        </tr>
+    </table>
+<button class=""> <a href="page.html"> page</a></button>
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block title %}
+    Log In
+{% endblock %}
+<style>
+th
+{
+
+text-align: CENTER;
+BORDER: 1PX SOLID;
+}
+td {
+    text-align: CENTER;
+    BORDER: 1PX SOLID;
+    }
+    table
+    {
+    align:center;
+    }
+</style>
+{% block main %}
+ <table class="table table-hover">
+        <tr>
+            <th>STOCK SYMBOL</th>
+            <th>NO OF STOCKS</th>
+            <th>PRICE PER STOCK</th>
+            <th>CURRENT PRICE</th>
+            <th>TOTAL VALUE</th>
+
+
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1]}}</td>
+            <td>{{ row[2]}}</td>
+            <td>{{ count}}</td>
+            <td>{{ row[1]*row[2] }}</td>
+        </tr>
+        {% endfor %}
+     <span>GRAND TOTAL $  10,000 </span></br>
+     <span>AVAILABLE  $ {{""}}</span>
+        </table>
+    <form action="{{ url_for('sell') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <select  class="form-control" name="share" >
+                        {% for row in rows  %}
+                             <option>{{row[0]}}</option>
+                        {% endfor %}
+                </select>
+            </div>
+
+
+               <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="quant" placeholder="NO OF SHARE" type="text"/>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-default" type="submit" value="sell" name="sell">SELL</button>
+            </div>
+        </fieldset>
+    </form>
+
+<script>
+alert("fgd);
+</script>
+{% endblock %}

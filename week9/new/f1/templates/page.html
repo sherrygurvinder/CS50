@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>textured_stars - a page</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+
+ul#menu, ul#menu li
+{ float: left;
+  margin: 0;
+  padding: 0;}
+
+ul#menu li
+{ list-style: none;}
+
+ul#menu li a
+{ letter-spacing: 0.1em;
+  font: normal 100% arial, sans-serif;
+  display: block;
+  float: left;
+  height: 37px;
+  padding: 29px 26px 6px 26px;
+  text-align: center;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;}
+
+ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
+{ color: #FFF;
+  background: transparent url(transparent.png) repeat;}
+
+#site_content
+{ width: 854px;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding: 20px 24px 20px 20px;
+  background: transparent url(transparent_light.png) repeat;}
+
+.sidebar
+{ float: left;
+  width: 190px;
+  padding: 0 15px 20px 15px;}
+
+.sidebar ul
+{ width: 178px;
+  padding: 4px 0 0 0;
+  margin: 4px 0 30px 0;}
+
+.sidebar li
+{ list-style: none;
+  padding: 0 0 7px 0; }
+
+textarea
+{
+    margin: 0px;
+    width: 557px;
+    height: 211px;
+
+}
+.btn
+{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+body
+{ font: normal .80em 'trebuchet ms', arial, sans-serif;
+  background: #F0EFE2 url(background.png) repeat;
+  color: #FFF;}
+  .search
+{ color: #5D5D5D;
+  border: 1px solid #BBB;
+  width: 134px;
+  padding: 4px;
+  font: 100% arial, sans-serif;}
+
+#colours
+{ height: 0px;
+  text-align: right;
+  padding: 66px 16px 0px 300px;}
+
+</style>
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html"><span class="logo_colour"><b>Y</b>our <b>T</b>houghts</span></a></h1>
+          <h2>A website that stores yours Memories</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="page.html">Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+
+        <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>write here</h1>
+        <form method="post" action="">
+          <input type="text" name="title" placeholder="DIARY TITLE" style="margin-bottom: 10px;">
+          <textarea rows="5" cols="20">Write your text</textarea>
+          <input type="submit" class="btn" value="SAVE">
+        </form>
+      </div>
+    </div>
+    <div id="footer">
+
+    </div>
+  </div>
+</body>
+<script>
+$(document).ready(function(){
+        alert("hello");
+        $("p").click(function(){
+        $(this).hide();
+    });
+});
+</script>
+</html>
